@@ -1,0 +1,104 @@
+button.toggle-btn {
+    background: transparent;
+    font-size: 1rem;
+    line-height: 1.5;
+    --line-height: 1.5rem;
+    padding: 0.9rem 1rem;
+    border: solid 0.0625rem rgb(var(--color) / var(--border-alpha));
+    background-color: rgb(var(--filled));
+    color: rgb(var(--contrast-filled));
+    --active-bg: var(--body-bg);
+    border-radius: 0.25rem;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    transition-timing-function: ease-out;
+    transition-duration: var(--transition-duration);
+    transition-property: all;
+}
+
+.toggle-btn.icon {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1 {
+    width: 1em;
+}
+
+.bar2 {
+    width: 0.5em;
+}
+
+.bar3 {
+    width: 0.2em;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    height: 0.14em;
+    background-color: rgb(var(--contrast-filled));
+    margin: 3px auto;
+    transition: 0.4s;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(128, 128, 128, 0.5);
+    display: none;
+}
+
+.overlay.drawer-active {
+    display: block;
+}
+
+.drawer {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: rgb(var(--filled));
+    overflow-y: auto;
+    height: 100%;
+}
+
+.drawer ul {
+    list-style: none;
+    text-align: left;
+}
+
+.drawer ul li {
+    color: white;
+    padding: 14px;
+    text-decoration: none;
+    padding: 1rem 4.5rem 1rem 1rem;
+}
+
+.drawer ul li:hover {
+    color: rgb(var(--filled));
+    background-color: rgb(var(--contrast-filled));
+}
+
+.scroll::-webkit-scrollbar {
+    width: 12px;
+}
+
+.scroll::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.062);
+    border-radius: 10px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.719);
+}
